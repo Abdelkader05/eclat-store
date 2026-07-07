@@ -5,6 +5,15 @@ Projet : Éclat Store
 Type : Plateforme e-commerce cosmétique  
 Développement : Solo
 
+Version actuellement publiée :
+
+- landing page produit unique ;
+- produit : Biodance Bio Collagen Real Deep Mask ;
+- prix : 2 000 FCFA ;
+- commande : WhatsApp vers +223 62901424 ;
+- site : https://eclat-store-frontend.vercel.app/ ;
+- backend non requis pour cette version.
+
 ---
 
 # 1. Introduction

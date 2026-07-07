@@ -5,6 +5,17 @@ Projet : Éclat Store
 Type : Plateforme e-commerce cosmétique  
 Développement : Solo
 
+État actuel :
+
+- v0.1 publiée sur Vercel ;
+- site public : https://eclat-store-frontend.vercel.app/ ;
+- dépôt GitHub : https://github.com/Abdelkader05/eclat-store ;
+- frontend publié uniquement ;
+- backend non déployé ;
+- produit unique affiché : Biodance Bio Collagen Real Deep Mask ;
+- commande via WhatsApp : +223 62901424 ;
+- plugin Vercel installé pour Codex, à charger après redémarrage.
+
 ---
 
 # 1. Introduction
