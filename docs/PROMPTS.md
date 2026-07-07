@@ -4,6 +4,18 @@ Version : 1.0
 
 ---
 
+# 0. Reprise rapide
+
+Pour reprendre le projet dans une nouvelle session, utiliser d'abord :
+
+```text
+docs/RESUME_PROMPT.md
+```
+
+Ce fichier contient le prompt à copier-coller avec l'état actuel du projet, le lien GitHub, le lien Vercel, les règles importantes et les priorités immédiates.
+
+---
+
 # 1. Prompt principal projet
 
 Utiliser ce prompt au début de chaque session avec une IA de développement.
