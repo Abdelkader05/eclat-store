@@ -8,6 +8,25 @@ Base de données : PostgreSQL + Prisma
 
 ---
 
+# 0. Statut actuel du MVP
+
+La version publiee fonctionne comme une landing page Next.js de vente directe via WhatsApp.
+
+- Frontend publie sur Vercel : `https://eclat-store-frontend.vercel.app/`
+- Backend Express present dans le depot, mais non deploye.
+- Aucune API n'est requise par le parcours d'achat actuel.
+- Produit vendu : Biodance Bio Collagen Real Deep Mask.
+- Prix produit : 2 000 FCFA.
+- Livraison partout a Bamako : 1 000 FCFA.
+- Total estime : 3 000 FCFA.
+- Commande via WhatsApp : +223 62901424.
+- Ne pas ajouter de paiement en ligne.
+- Ne pas ajouter de panier complet pour le MVP actuel.
+
+Le reste de ce document decrit la cible technique future du backend, a utiliser seulement quand le projet passera a une vraie API de commandes.
+
+---
+
 # 1. Introduction
 
 Ce document définit toutes les API utilisées par Éclat Store.

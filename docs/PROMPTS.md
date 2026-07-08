@@ -4,7 +4,27 @@ Version : 1.0
 
 ---
 
-# 0. Reprise rapide
+# 0. Etat actuel a rappeler a chaque IA
+
+Avant toute nouvelle session, lire `docs/RESUME_PROMPT.md`.
+
+Etat actuel :
+
+- site publie : `https://eclat-store-frontend.vercel.app/` ;
+- frontend Next.js deploye sur Vercel ;
+- backend Express present dans le depot, mais non deploye ;
+- MVP actuel : vente WhatsApp produit unique ;
+- produit : Biodance Bio Collagen Real Deep Mask ;
+- prix : 2 000 FCFA ;
+- livraison partout a Bamako : 1 000 FCFA ;
+- total estime : 3 000 FCFA ;
+- commande WhatsApp : +223 62901424 ;
+- aucun paiement en ligne ;
+- pas de panier complet.
+
+---
+
+# 1. Reprise rapide
 
 Pour reprendre le projet dans une nouvelle session, utiliser d'abord :
 
@@ -16,7 +36,7 @@ Ce fichier contient le prompt à copier-coller avec l'état actuel du projet, le
 
 ---
 
-# 1. Prompt principal projet
+# 2. Prompt principal projet
 
 Utiliser ce prompt au début de chaque session avec une IA de développement.
 
@@ -44,6 +64,10 @@ Règles obligatoires :
 
 Utilise TypeScript.
 Respecte l'architecture définie.
+Respecte le MVP actuel : commande WhatsApp uniquement.
+Ne déploie pas le backend tant que ce n'est pas demandé.
+N'ajoute pas de paiement en ligne.
+N'ajoute pas de panier complet.
 Ne crée pas de fichiers inutiles.
 Ne duplique pas le code.
 Crée des composants réutilisables.

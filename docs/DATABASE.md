@@ -7,6 +7,20 @@ ORM : Prisma
 
 ---
 
+# 0. Statut actuel du MVP
+
+La version publiee n'utilise pas encore de base de donnees.
+
+- Le parcours d'achat passe par WhatsApp.
+- Le backend Express existe dans le depot, mais n'est pas deploye.
+- Aucune table Prisma ne doit etre consideree comme obligatoire pour le MVP actuel.
+- Aucune table `payments` ne doit etre creee pour cette phase.
+- Aucun panier complet ne doit etre active dans l'interface actuelle.
+
+Ce document reste la reference pour la future version backend/base de donnees.
+
+---
+
 # 1. Introduction
 
 Ce document décrit la structure officielle de la base de données Éclat Store.
@@ -416,7 +430,7 @@ Champs :
 
 Note :
 
-Le panier invité peut rester côté navigateur dans le MVP, puis être fusionné avec le panier utilisateur après connexion.
+Le MVP actuel ne doit pas activer de panier complet. Un panier invite ou connecte pourra etre etudie dans une phase future, apres validation du besoin.
 
 ---
 

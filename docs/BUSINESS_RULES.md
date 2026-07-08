@@ -7,6 +7,24 @@ Développement : Solo
 
 ---
 
+# 0. Regles actuelles du MVP WhatsApp
+
+Ces regles passent avant les sections futures du document tant que le projet reste en MVP WhatsApp :
+
+- vendre un seul produit : Biodance Bio Collagen Real Deep Mask ;
+- afficher le prix produit : 2 000 FCFA ;
+- afficher la livraison partout a Bamako : 1 000 FCFA ;
+- afficher le total estime : 3 000 FCFA ;
+- diriger toutes les commandes vers WhatsApp au +223 62901424 ;
+- demander dans le message WhatsApp : quantite, nom, quartier, telephone, disponibilite souhaitee ;
+- ne pas ajouter de paiement en ligne ;
+- ne pas ajouter de panier complet ;
+- ne pas presenter de fonctionnalite non disponible comme active.
+
+Les comptes client, favoris, panier, commandes backend et administration sont des evolutions futures.
+
+---
+
 # 1. Introduction
 
 Ce document définit les règles métier officielles du projet Éclat Store.
@@ -393,7 +411,7 @@ Le panier est stocké temporairement.
 
 Après connexion :
 
-Le panier invité doit être fusionné avec le compte utilisateur.
+Regle future uniquement : si un panier invite est ajoute plus tard, il devra etre fusionne avec le compte utilisateur apres connexion.
 
 ---
 

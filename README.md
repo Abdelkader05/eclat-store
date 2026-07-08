@@ -12,6 +12,15 @@ La version actuellement publiée est un MVP WhatsApp centré sur un seul produit
 
 Le backend Express est conservé dans le dépôt pour les évolutions futures, mais il n'est pas déployé pour cette version. Aucun paiement en ligne et aucun panier complet ne doivent être ajoutés dans le périmètre actuel.
 
+## Documentation de reference
+
+- `docs/PROJECT_STATUS.md` : etat actuel du MVP.
+- `docs/DEVELOPMENT_GUIDE.md` : commandes et regles de travail.
+- `docs/FEATURES.md` : fonctionnalites disponibles et futures.
+- `docs/UI_GUIDELINES.md` : direction visuelle mobile-first.
+- `docs/DEPLOYMENT.md` : publication Vercel.
+- `docs/RESUME_PROMPT.md` : prompt de reprise pour une nouvelle session Codex.
+
 ## Stack
 
 - Frontend : Next.js, React, TypeScript, TailwindCSS, Framer Motion

@@ -7,6 +7,21 @@ Design : Premium / Minimaliste / Féminin / Moderne
 
 ---
 
+# 0. Application actuelle
+
+Le site publie est un MVP WhatsApp mobile-first.
+
+- Produit unique : Biodance Bio Collagen Real Deep Mask.
+- Parcours principal : commander sur WhatsApp.
+- Prix visible : 2 000 FCFA.
+- Livraison Bamako visible : 1 000 FCFA.
+- Total estime visible : 3 000 FCFA.
+- Ne pas afficher de panier complet.
+- Ne pas afficher de paiement en ligne.
+- Les icones non fonctionnelles doivent etre masquees ou transformees en vraies actions.
+
+---
+
 # 1. Introduction
 
 Ce document définit toutes les règles visuelles et d'expérience utilisateur du projet Éclat Store.
@@ -69,9 +84,9 @@ Desktop
 
 Chaque action importante doit être évidente :
 
-Exemples :
+Exemples pour le MVP actuel :
 
-Ajouter au panier :
+Commander sur WhatsApp :
 
 → bouton visible immédiatement.
 
@@ -286,7 +301,7 @@ Inter
 
 Exemple :
 
-"Ajouter au panier"
+"Commander sur WhatsApp"
 
 Style :
 

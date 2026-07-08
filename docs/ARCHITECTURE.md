@@ -7,6 +7,24 @@ Développeur : Projet individuel
 
 ---
 
+# 0. Statut actuel du MVP
+
+La version en production est volontairement plus simple que l'architecture cible :
+
+- frontend Next.js deploye sur Vercel ;
+- backend Express conserve dans le depot, mais non deploye ;
+- aucune base de donnees utilisee par le parcours d'achat actuel ;
+- vente produit unique via WhatsApp ;
+- Biodance Bio Collagen Real Deep Mask a 2 000 FCFA ;
+- livraison partout a Bamako a 1 000 FCFA ;
+- total estime affiche : 3 000 FCFA ;
+- pas de paiement en ligne ;
+- pas de panier complet.
+
+Les sections backend, base de donnees, panier, compte client et administration decrivent l'evolution future, pas le MVP publie.
+
+---
+
 # 1. Introduction
 
 Ce document décrit l'architecture technique complète du projet Éclat Store.
