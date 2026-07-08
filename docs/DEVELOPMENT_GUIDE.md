@@ -61,6 +61,12 @@ Livraison :
 Partout à Bamako : 1 000 FCFA
 ```
 
+Total estimé :
+
+```text
+3 000 FCFA
+```
+
 Commande :
 
 ```text

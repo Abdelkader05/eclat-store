@@ -14,7 +14,9 @@ Développement : Solo
 - backend non déployé ;
 - produit unique affiché : Biodance Bio Collagen Real Deep Mask ;
 - commande via WhatsApp : +223 62901424 ;
-- plugin Vercel installé pour Codex, à charger après redémarrage.
+- livraison partout à Bamako : 1 000 FCFA ;
+- MVP actuel : vente WhatsApp produit unique, sans backend déployé, sans paiement en ligne, sans panier complet ;
+- plugin Vercel installé et chargé dans Codex.
 
 ---
 

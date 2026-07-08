@@ -20,10 +20,12 @@ Avant toute action, lis :
 - Version actuelle : landing page produit unique.
 - Produit : Biodance Bio Collagen Real Deep Mask.
 - Prix : 2 000 FCFA.
+- Livraison : partout à Bamako pour 1 000 FCFA.
+- Total estimé : 3 000 FCFA.
 - Commande : WhatsApp vers +223 62901424.
 - Aucun paiement en ligne ne doit être ajouté.
 - Pas de panier complet pour l'instant.
-- Plugin Vercel installé, vérifier s'il est chargé après redémarrage Codex.
+- Plugin Vercel installé et chargé dans Codex.
 
 Objectif de la session :
 [ÉCRIRE ICI CE QUE JE VEUX FAIRE]

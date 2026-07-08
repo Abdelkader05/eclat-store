@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import {
   Check,
@@ -8,95 +9,47 @@ import {
   Sparkles,
   Truck
 } from "lucide-react";
-
-const whatsappMessage = encodeURIComponent(
-  "Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA. La livraison à Bamako est à 1 000 FCFA."
-);
-
-const whatsappUrl = `https://wa.me/22362901424?text=${whatsappMessage}`;
-const officialProductUrl =
-  "https://biodance.com/products/biodance-bio-collagen-real-deep-mask";
-
-const galleryImages = [
-  {
-    src: "/biodance-mask.png",
-    alt: "Biodance Bio Collagen Real Deep Mask"
-  },
-  {
-    src: "/biodance-glow-result.jpg",
-    alt: "Résultat lumineux après le masque Biodance"
-  },
-  {
-    src: "/biodance-mask-application.jpg",
-    alt: "Application du masque hydrogel Biodance"
-  },
-  {
-    src: "/biodance-packaging.jpg",
-    alt: "Sachets Biodance Bio Collagen Real Deep Mask"
-  }
-];
-
-const benefits = [
-  "Hydratation profonde avec acide hyaluronique oligo",
-  "Aide à lisser l'apparence des pores",
-  "Soutient l'élasticité et l'éclat de la peau",
-  "Formule pensée aussi pour les peaux sensibles"
-];
-
-const officialBenefits = [
-  {
-    title: "Hydratation profonde",
-    text: "L'acide hyaluronique oligo aide à hydrater la surface de la peau et à apporter une sensation de confort plus durable."
-  },
-  {
-    title: "Pores et fermeté",
-    text: "Le collagène de faible poids moléculaire est mis en avant par Biodance pour aider à améliorer l'apparence des pores et l'élasticité."
-  },
-  {
-    title: "Barrière cutanée",
-    text: "La formule contient des probiotiques, pensés pour accompagner l'équilibre de la barrière de la peau."
-  },
-  {
-    title: "Peaux sensibles",
-    text: "Biodance présente ce masque comme hypoallergénique et formulé sans ingrédients irritants controversés."
-  }
-];
-
-const keyIngredients = [
-  "Low-Molecular Weight Collagen Peptide",
-  "Galactomyces",
-  "Oligo Hyaluronic Acid",
-  "Niacinamide"
-];
-
-const customerResults = [
-  "100% ont constaté une amélioration de l'apparence des pores",
-  "95% ont trouvé leur peau plus hydratée",
-  "90% ont trouvé leur peau plus lumineuse",
-  "100% ont constaté une amélioration des rougeurs"
-];
-
-const steps = [
-  "Appliquer le masque sur une peau propre.",
-  "Laisser poser selon ta routine et ton confort.",
-  "Retirer puis masser doucement l'excédent sur le visage."
-];
+import { PriceSummary } from "@/components/PriceSummary";
+import { SiteFooter } from "@/components/SiteFooter";
+import { biodanceProduct, siteUrl, whatsappUrl } from "@/data/biodance-product";
 
 export const metadata: Metadata = {
-  title: "Biodance Bio Collagen Real Deep Mask | Éclat Store",
+  title: `${biodanceProduct.name} | Éclat Store`,
   description:
-    "Page produit du masque Biodance Bio Collagen Real Deep Mask, disponible à Bamako chez Éclat Store."
+    "Commandez le masque Biodance Bio Collagen Real Deep Mask à Bamako avec livraison partout à Bamako.",
+  alternates: {
+    canonical: `${siteUrl}${biodanceProduct.productUrl}`
+  },
+  openGraph: {
+    title: `${biodanceProduct.name} | Éclat Store`,
+    description:
+      "Prix 2 000 FCFA, livraison partout à Bamako à 1 000 FCFA, commande simple sur WhatsApp.",
+    url: `${siteUrl}${biodanceProduct.productUrl}`,
+    siteName: "Éclat Store",
+    images: [
+      {
+        url: biodanceProduct.mainImage.src,
+        width: 1200,
+        height: 1200,
+        alt: biodanceProduct.mainImage.alt
+      }
+    ],
+    locale: "fr_ML",
+    type: "website"
+  }
 };
+
+const galleryImages = [biodanceProduct.mainImage, ...biodanceProduct.galleryImages];
 
 export default function BiodanceProductPage() {
   return (
     <main className="min-h-screen px-4 py-5 text-ink sm:px-6 lg:px-8">
       <section className="mx-auto max-w-7xl overflow-hidden rounded-[28px] border border-white/70 bg-white/65 shadow-soft backdrop-blur">
         <header className="flex items-center justify-between border-b border-raspberry/10 bg-white/80 px-5 py-4 backdrop-blur lg:px-8">
-          <a className="flex items-center gap-2 font-heading text-xl font-semibold tracking-wide text-wine" href="/">
+          <Link className="flex items-center gap-2 font-heading text-xl font-semibold tracking-wide text-wine" href="/">
             <Sparkles className="h-6 w-6 text-raspberry" />
             ÉCLAT STORE
-          </a>
+          </Link>
           <a
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-raspberry px-4 text-xs font-bold uppercase text-white shadow-lg shadow-raspberry/20 transition hover:bg-wine sm:px-5"
             href={whatsappUrl}
@@ -114,11 +67,11 @@ export default function BiodanceProductPage() {
               Accueil / Produit / Biodance
             </p>
 
-            <div className="grid gap-3 sm:grid-cols-4">
-              <div className="relative aspect-square overflow-hidden rounded-[26px] border border-white bg-white shadow-soft sm:col-span-4">
+            <div className="grid grid-cols-4 gap-3">
+              <div className="relative col-span-4 aspect-square overflow-hidden rounded-[26px] border border-white bg-white shadow-soft">
                 <Image
-                  src="/biodance-mask.png"
-                  alt="Biodance Bio Collagen Real Deep Mask"
+                  src={biodanceProduct.mainImage.src}
+                  alt={biodanceProduct.mainImage.alt}
                   fill
                   priority
                   sizes="(min-width: 1024px) 620px, 100vw"
@@ -146,27 +99,22 @@ export default function BiodanceProductPage() {
           <article className="flex flex-col justify-center">
             <p className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-raspberry">
               <ShieldCheck className="h-4 w-4" />
-              Disponible à Bamako
+              {biodanceProduct.availability}
             </p>
-            <p className="text-sm font-semibold text-raspberry">Biodance</p>
+            <p className="text-sm font-semibold text-raspberry">{biodanceProduct.brand}</p>
             <h1 className="mt-2 font-heading text-4xl font-semibold leading-tight text-wine lg:text-5xl">
-              Bio Collagen Real Deep Mask
+              {biodanceProduct.shortName}
             </h1>
             <p className="mt-4 text-sm leading-7 text-ink/70">
-              Masque hydrogel au collagène pour hydrater en profondeur, soutenir l'élasticité et donner un effet peau fraîche. Une routine simple pour retrouver un éclat net.
+              {biodanceProduct.description} Une routine simple pour retrouver un éclat net.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <p className="rounded-xl bg-white px-5 py-3 text-3xl font-bold text-ink shadow-sm">
-                2 000 FCFA
-              </p>
-              <span className="rounded-xl border border-gold/40 bg-white/70 px-4 py-3 text-sm font-semibold text-ink/70">
-                Livraison Bamako : 1 000 FCFA
-              </span>
+            <div className="mt-6">
+              <PriceSummary />
             </div>
 
             <div className="mt-6 grid gap-3">
-              {benefits.map((benefit) => (
+              {biodanceProduct.benefits.map((benefit) => (
                 <div key={benefit} className="flex items-center gap-3 text-sm font-semibold text-ink/75">
                   <Check className="h-5 w-5 text-raspberry" />
                   {benefit}
@@ -184,12 +132,12 @@ export default function BiodanceProductPage() {
                 <MessageCircle className="h-5 w-5" />
                 Commander sur WhatsApp
               </a>
-              <a
+              <Link
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-raspberry/25 bg-white/70 px-6 text-sm font-bold uppercase text-raspberry transition hover:border-raspberry"
                 href="/#produit"
               >
                 Retour à l'accueil
-              </a>
+              </Link>
             </div>
           </article>
         </section>
@@ -231,7 +179,7 @@ export default function BiodanceProductPage() {
             </p>
             <a
               className="mt-5 inline-flex text-sm font-semibold text-raspberry"
-              href={officialProductUrl}
+              href={biodanceProduct.officialProductUrl}
               target="_blank"
               rel="noreferrer"
             >
@@ -240,7 +188,7 @@ export default function BiodanceProductPage() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            {officialBenefits.map((benefit) => (
+            {biodanceProduct.officialBenefits.map((benefit) => (
               <div key={benefit.title} className="rounded-2xl border border-raspberry/10 bg-blush px-4 py-4">
                 <p className="font-semibold text-wine">{benefit.title}</p>
                 <p className="mt-2 text-sm leading-6 text-ink/70">{benefit.text}</p>
@@ -255,7 +203,7 @@ export default function BiodanceProductPage() {
               Ingrédients clés
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              {keyIngredients.map((ingredient) => (
+              {biodanceProduct.keyIngredients.map((ingredient) => (
                 <span
                   key={ingredient}
                   className="rounded-full border border-raspberry/15 bg-white px-4 py-2 text-sm font-semibold text-ink/75"
@@ -271,7 +219,7 @@ export default function BiodanceProductPage() {
               Résultats communiqués par Biodance
             </p>
             <div className="mt-4 grid gap-3">
-              {customerResults.map((result) => (
+              {biodanceProduct.customerResults.map((result) => (
                 <div key={result} className="flex items-center gap-3 text-sm font-semibold text-ink/75">
                   <Check className="h-5 w-5 text-raspberry" />
                   {result}
@@ -291,7 +239,7 @@ export default function BiodanceProductPage() {
             </h2>
           </div>
           <div className="grid gap-3">
-            {steps.map((step, index) => (
+            {biodanceProduct.usageSteps.map((step, index) => (
               <div key={step} className="flex gap-4 rounded-2xl border border-raspberry/10 bg-white px-4 py-4">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blush text-sm font-bold text-raspberry">
                   {index + 1}
@@ -301,6 +249,8 @@ export default function BiodanceProductPage() {
             ))}
           </div>
         </section>
+
+        <SiteFooter />
       </section>
     </main>
   );

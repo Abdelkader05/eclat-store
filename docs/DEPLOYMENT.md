@@ -129,7 +129,7 @@ git push
 
 # 7. Plugin Vercel
 
-Le plugin Vercel a été installé pour Codex.
+Le plugin Vercel est installé et chargé dans Codex.
 
 Commande utilisée :
 
@@ -137,10 +137,10 @@ Commande utilisée :
 pnpm dlx plugins add vercel/vercel-plugin --target codex
 ```
 
-Après installation :
+État actuel :
 
 ```text
-Redémarrer Codex pour charger le plugin.
+Disponible dans Codex.
 ```
 
 ---

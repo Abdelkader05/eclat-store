@@ -55,6 +55,7 @@ Détails affichés :
 - prix : `2 000 FCFA` ;
 - disponibilité : Bamako ;
 - livraison : partout à Bamako pour `1 000 FCFA` ;
+- total estimé : `3 000 FCFA` ;
 - image produit réelle ;
 - bouton WhatsApp de commande.
 
@@ -67,7 +68,16 @@ https://wa.me/22362901424
 Message prérempli :
 
 ```text
-Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA. La livraison à Bamako est à 1 000 FCFA.
+Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask.
+Prix produit : 2 000 FCFA.
+Livraison partout à Bamako : 1 000 FCFA.
+Total estimé : 3 000 FCFA.
+
+Quantité :
+Nom :
+Quartier :
+Téléphone :
+Disponibilité souhaitée :
 ```
 
 ---
@@ -157,22 +167,18 @@ Ne pas déployer le backend Express tant qu'il n'est pas nécessaire.
 
 ## Plugin Vercel
 
-Le plugin Vercel a été installé pour Codex avec :
+Le plugin Vercel est installé et chargé dans Codex.
+
+Commande utilisée :
 
 ```text
 pnpm dlx plugins add vercel/vercel-plugin --target codex
 ```
 
-État :
+État actuel :
 
 ```text
-Installé, mais nécessite un redémarrage de Codex pour être chargé.
-```
-
-Action à faire avant la prochaine session :
-
-```text
-Fermer puis rouvrir Codex.
+Installé et disponible.
 ```
 
 ---
@@ -197,8 +203,8 @@ Ces éléments viendront après validation des prochaines priorités.
 
 Pour la suite, la priorité est :
 
-1. Vérifier le site publié sur mobile.
-2. Tester le bouton WhatsApp.
-3. Corriger les textes ou visuels demandés.
+1. Garder le MVP WhatsApp clair et fiable.
+2. Vérifier régulièrement le site publié sur mobile.
+3. Tester le bouton WhatsApp et le message prérempli.
 4. Ajouter éventuellement un domaine personnalisé.
-5. Ajouter ensuite les fonctionnalités commerciales minimales.
+5. Ajouter ensuite les fonctionnalités commerciales minimales seulement après validation.

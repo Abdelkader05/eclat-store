@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { biodanceProduct, formatFcfa, siteUrl, totalPrice } from "@/data/biodance-product";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -14,8 +15,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Éclat Store | Masque Biodance à Bamako",
-  description: "Commandez le Biodance Bio Collagen Real Deep Mask à Bamako avec Éclat Store."
+  description: `Commandez le ${biodanceProduct.name} à Bamako. Produit ${formatFcfa(biodanceProduct.price)}, livraison ${formatFcfa(biodanceProduct.deliveryFee)}, total estimé ${formatFcfa(totalPrice)}.`,
+  openGraph: {
+    title: "Éclat Store | Masque Biodance à Bamako",
+    description: "Commande simple sur WhatsApp, livraison partout à Bamako.",
+    url: siteUrl,
+    siteName: "Éclat Store",
+    images: [
+      {
+        url: biodanceProduct.mainImage.src,
+        width: 1200,
+        height: 1200,
+        alt: biodanceProduct.mainImage.alt
+      }
+    ],
+    locale: "fr_ML",
+    type: "website"
+  }
 };
 
 export default function RootLayout({

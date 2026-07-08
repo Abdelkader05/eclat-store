@@ -5,7 +5,7 @@ export type ProductPreview = {
   description: string;
   imageSrc: string;
   imageAlt: string;
-  galleryImages?: {
+  galleryImages?: readonly {
     src: string;
     alt: string;
   }[];
