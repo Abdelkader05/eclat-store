@@ -61,6 +61,14 @@ export function ProductCard({ product }: ProductCardProps) {
           <MessageCircle className="h-5 w-5" />
           Commander sur WhatsApp
         </a>
+        {product.detailUrl ? (
+          <a
+            className="mt-3 inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-raspberry/25 bg-white px-5 text-sm font-bold uppercase text-raspberry transition hover:border-raspberry sm:w-fit"
+            href={product.detailUrl}
+          >
+            Voir la page produit
+          </a>
+        ) : null}
       </div>
     </article>
   );

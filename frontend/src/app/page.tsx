@@ -22,6 +22,7 @@ const whatsappMessage = encodeURIComponent(
 );
 
 const whatsappUrl = `https://wa.me/22362901424?text=${whatsappMessage}`;
+const productUrl = "/product/biodance-bio-collagen-real-deep-mask";
 
 const categories = [
   { name: "Soins visage", icon: Sparkles },
@@ -53,6 +54,7 @@ const product: ProductPreview = {
       alt: "Sachets Biodance Bio Collagen Real Deep Mask"
     }
   ],
+  detailUrl: productUrl,
   whatsappUrl
 };
 
@@ -131,9 +133,9 @@ export default function HomePage() {
                 <MessageCircle className="h-5 w-5" />
                 Commander sur WhatsApp
               </a>
-              <a className="rounded-xl border border-raspberry/30 bg-white/70 px-6 py-3 text-sm font-bold uppercase text-raspberry transition hover:border-raspberry" href="#produit">
-                Voir le produit
-              </a>
+            <a className="rounded-xl border border-raspberry/30 bg-white/70 px-6 py-3 text-sm font-bold uppercase text-raspberry transition hover:border-raspberry" href={productUrl}>
+              Voir le produit
+            </a>
             </div>
           </motion.div>
 
@@ -177,8 +179,8 @@ export default function HomePage() {
               <p className="text-sm font-semibold uppercase tracking-[0.16em] text-raspberry">Produit du jour</p>
               <h2 className="font-heading text-3xl font-semibold text-wine">Biodance à Bamako</h2>
             </div>
-            <a className="text-sm font-semibold text-raspberry" href={whatsappUrl} target="_blank" rel="noreferrer">
-              Commander maintenant
+            <a className="text-sm font-semibold text-raspberry" href={productUrl}>
+              Voir la page produit
             </a>
           </div>
 

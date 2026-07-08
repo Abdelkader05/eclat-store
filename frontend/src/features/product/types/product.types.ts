@@ -9,5 +9,6 @@ export type ProductPreview = {
     src: string;
     alt: string;
   }[];
+  detailUrl?: string;
   whatsappUrl: string;
 };
