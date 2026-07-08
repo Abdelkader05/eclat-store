@@ -14,6 +14,8 @@ const whatsappMessage = encodeURIComponent(
 );
 
 const whatsappUrl = `https://wa.me/22362901424?text=${whatsappMessage}`;
+const officialProductUrl =
+  "https://biodance.com/products/biodance-bio-collagen-real-deep-mask";
 
 const galleryImages = [
   {
@@ -35,10 +37,43 @@ const galleryImages = [
 ];
 
 const benefits = [
-  "Hydratation intense",
-  "Aide à révéler l'éclat naturel",
-  "Texture hydrogel confortable",
-  "Idéal pour une routine visage premium"
+  "Hydratation profonde avec acide hyaluronique oligo",
+  "Aide à lisser l'apparence des pores",
+  "Soutient l'élasticité et l'éclat de la peau",
+  "Formule pensée aussi pour les peaux sensibles"
+];
+
+const officialBenefits = [
+  {
+    title: "Hydratation profonde",
+    text: "L'acide hyaluronique oligo aide à hydrater la surface de la peau et à apporter une sensation de confort plus durable."
+  },
+  {
+    title: "Pores et fermeté",
+    text: "Le collagène de faible poids moléculaire est mis en avant par Biodance pour aider à améliorer l'apparence des pores et l'élasticité."
+  },
+  {
+    title: "Barrière cutanée",
+    text: "La formule contient des probiotiques, pensés pour accompagner l'équilibre de la barrière de la peau."
+  },
+  {
+    title: "Peaux sensibles",
+    text: "Biodance présente ce masque comme hypoallergénique et formulé sans ingrédients irritants controversés."
+  }
+];
+
+const keyIngredients = [
+  "Low-Molecular Weight Collagen Peptide",
+  "Galactomyces",
+  "Oligo Hyaluronic Acid",
+  "Niacinamide"
+];
+
+const customerResults = [
+  "100% ont constaté une amélioration de l'apparence des pores",
+  "95% ont trouvé leur peau plus hydratée",
+  "90% ont trouvé leur peau plus lumineuse",
+  "100% ont constaté une amélioration des rougeurs"
 ];
 
 const steps = [
@@ -118,7 +153,7 @@ export default function BiodanceProductPage() {
               Bio Collagen Real Deep Mask
             </h1>
             <p className="mt-4 text-sm leading-7 text-ink/70">
-              Masque hydrogel au collagène pour hydrater, illuminer et donner un effet peau fraîche. Une routine simple pour retrouver un éclat net.
+              Masque hydrogel au collagène pour hydrater en profondeur, soutenir l'élasticité et donner un effet peau fraîche. Une routine simple pour retrouver un éclat net.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -179,6 +214,69 @@ export default function BiodanceProductPage() {
             <div>
               <p className="font-semibold text-wine">Conseil simple</p>
               <p className="text-sm text-ink/65">Échange direct sur WhatsApp</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid gap-8 bg-white/70 px-5 py-10 lg:grid-cols-[0.9fr_1.1fr] lg:px-14">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-raspberry">
+              Infos officielles Biodance
+            </p>
+            <h2 className="mt-2 font-heading text-3xl font-semibold text-wine">
+              Ce que le masque met en avant
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-ink/70">
+              D'après la page officielle Biodance, ce masque cible surtout l'hydratation, l'apparence des pores, l'élasticité et le confort des peaux sensibles.
+            </p>
+            <a
+              className="mt-5 inline-flex text-sm font-semibold text-raspberry"
+              href={officialProductUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Voir la fiche officielle Biodance
+            </a>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {officialBenefits.map((benefit) => (
+              <div key={benefit.title} className="rounded-2xl border border-raspberry/10 bg-blush px-4 py-4">
+                <p className="font-semibold text-wine">{benefit.title}</p>
+                <p className="mt-2 text-sm leading-6 text-ink/70">{benefit.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-6 border-y border-raspberry/10 bg-white/60 px-5 py-8 lg:grid-cols-2 lg:px-14">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-raspberry">
+              Ingrédients clés
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {keyIngredients.map((ingredient) => (
+                <span
+                  key={ingredient}
+                  className="rounded-full border border-raspberry/15 bg-white px-4 py-2 text-sm font-semibold text-ink/75"
+                >
+                  {ingredient}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-raspberry">
+              Résultats communiqués par Biodance
+            </p>
+            <div className="mt-4 grid gap-3">
+              {customerResults.map((result) => (
+                <div key={result} className="flex items-center gap-3 text-sm font-semibold text-ink/75">
+                  <Check className="h-5 w-5 text-raspberry" />
+                  {result}
+                </div>
+              ))}
             </div>
           </div>
         </section>
