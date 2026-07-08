@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 const whatsappMessage = encodeURIComponent(
-  "Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA."
+  "Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA. La livraison à Bamako est à 1 000 FCFA."
 );
 
 const whatsappUrl = `https://wa.me/22362901424?text=${whatsappMessage}`;
@@ -126,7 +126,7 @@ export default function BiodanceProductPage() {
                 2 000 FCFA
               </p>
               <span className="rounded-xl border border-gold/40 bg-white/70 px-4 py-3 text-sm font-semibold text-ink/70">
-                En stock
+                Livraison Bamako : 1 000 FCFA
               </span>
             </div>
 
@@ -164,7 +164,7 @@ export default function BiodanceProductPage() {
             <Truck className="h-8 w-8 text-raspberry" />
             <div>
               <p className="font-semibold text-wine">Livraison rapide</p>
-              <p className="text-sm text-ink/65">Organisation directe à Bamako</p>
+              <p className="text-sm text-ink/65">Partout à Bamako : 1 000 FCFA</p>
             </div>
           </div>
           <div className="flex items-center gap-4">

@@ -55,6 +55,12 @@ Prix :
 2 000 FCFA
 ```
 
+Livraison :
+
+```text
+Partout à Bamako : 1 000 FCFA
+```
+
 Commande :
 
 ```text

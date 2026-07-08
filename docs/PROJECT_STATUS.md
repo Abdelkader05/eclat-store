@@ -54,6 +54,7 @@ Détails affichés :
 
 - prix : `2 000 FCFA` ;
 - disponibilité : Bamako ;
+- livraison : partout à Bamako pour `1 000 FCFA` ;
 - image produit réelle ;
 - bouton WhatsApp de commande.
 
@@ -66,7 +67,7 @@ https://wa.me/22362901424
 Message prérempli :
 
 ```text
-Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA.
+Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA. La livraison à Bamako est à 1 000 FCFA.
 ```
 
 ---

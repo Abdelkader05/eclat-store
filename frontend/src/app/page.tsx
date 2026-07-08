@@ -18,7 +18,7 @@ import { ProductCard } from "@/features/product/components/ProductCard";
 import type { ProductPreview } from "@/features/product/types/product.types";
 
 const whatsappMessage = encodeURIComponent(
-  "Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA."
+  "Bonjour Éclat Store, je veux commander le masque Biodance Bio Collagen Real Deep Mask à 2 000 FCFA. La livraison à Bamako est à 1 000 FCFA."
 );
 
 const whatsappUrl = `https://wa.me/22362901424?text=${whatsappMessage}`;
@@ -60,7 +60,7 @@ const product: ProductPreview = {
 
 const benefits = [
   { title: "Authenticité", text: "Produit sélectionné avec soin", icon: ShieldCheck },
-  { title: "Livraison rapide", text: "Disponible à Bamako", icon: Truck },
+  { title: "Livraison à Bamako", text: "Partout à Bamako : 1 000 FCFA", icon: Truck },
   { title: "Commande simple", text: "Directement sur WhatsApp", icon: MessageCircle }
 ];
 
@@ -119,7 +119,7 @@ export default function HomePage() {
                 2 000 FCFA
               </span>
               <span className="rounded-xl border border-gold/40 bg-white/70 px-4 py-3 text-sm font-semibold text-ink/70">
-                Même éclat. Encore plus rapide.
+                Livraison partout à Bamako : 1 000 FCFA
               </span>
             </div>
 
@@ -209,7 +209,7 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-raspberry">Pourquoi ce masque ?</p>
             <h2 className="mt-2 font-heading text-3xl font-semibold text-wine">Un soin simple pour une peau lumineuse</h2>
             <p className="mt-4 text-sm leading-7 text-ink/70">
-              Commande rapide sur WhatsApp, confirmation directe avec Éclat Store, puis livraison organisée à Bamako.
+              Commande rapide sur WhatsApp, confirmation directe avec Éclat Store, puis livraison partout à Bamako pour 1 000 FCFA.
             </p>
           </div>
 
