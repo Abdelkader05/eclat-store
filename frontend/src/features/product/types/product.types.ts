@@ -5,5 +5,9 @@ export type ProductPreview = {
   description: string;
   imageSrc: string;
   imageAlt: string;
+  galleryImages?: {
+    src: string;
+    alt: string;
+  }[];
   whatsappUrl: string;
 };

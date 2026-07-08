@@ -39,6 +39,20 @@ const product: ProductPreview = {
     "Masque hydrogel au collagène pour hydrater, illuminer et donner un effet peau fraîche. Une routine simple pour retrouver un éclat net, maintenant disponible à Bamako.",
   imageSrc: "/biodance-mask.png",
   imageAlt: "Biodance Bio Collagen Real Deep Mask",
+  galleryImages: [
+    {
+      src: "/biodance-glow-result.jpg",
+      alt: "Résultat lumineux après le masque Biodance"
+    },
+    {
+      src: "/biodance-mask-application.jpg",
+      alt: "Application du masque hydrogel Biodance"
+    },
+    {
+      src: "/biodance-packaging.jpg",
+      alt: "Sachets Biodance Bio Collagen Real Deep Mask"
+    }
+  ],
   whatsappUrl
 };
 

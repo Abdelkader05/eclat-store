@@ -9,15 +9,36 @@ type ProductCardProps = {
 export function ProductCard({ product }: ProductCardProps) {
   return (
     <article className="grid gap-6 rounded-card border border-raspberry/10 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-soft lg:grid-cols-[0.9fr_1.1fr] lg:p-6">
-      <div className="relative aspect-square overflow-hidden rounded-2xl bg-blush">
-        <Image
-          src={product.imageSrc}
-          alt={product.imageAlt}
-          fill
-          priority
-          sizes="(min-width: 1024px) 360px, 100vw"
-          className="object-cover"
-        />
+      <div className="space-y-3">
+        <div className="relative aspect-square overflow-hidden rounded-2xl bg-blush">
+          <Image
+            src={product.imageSrc}
+            alt={product.imageAlt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 360px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
+        {product.galleryImages && product.galleryImages.length > 0 ? (
+          <div className="grid grid-cols-3 gap-3">
+            {product.galleryImages.map((image) => (
+              <div
+                key={image.src}
+                className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-raspberry/10 bg-blush"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(min-width: 1024px) 120px, 30vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        ) : null}
       </div>
 
       <div className="flex flex-col justify-center">
